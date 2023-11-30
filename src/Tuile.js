@@ -4,9 +4,10 @@ export default class Tuile {
         this.word = word;
     }
 
-    pronounceWord() {
+    getPronunciation(language) {
         let speechSynthesisUtterance = new SpeechSynthesisUtterance(this.word);
-        speechSynthesisUtterance.lang = "fr-FR";
+        speechSynthesisUtterance.lang = language;
+        console.log(speechSynthesisUtterance);
         return speechSynthesisUtterance;
     }
 }
