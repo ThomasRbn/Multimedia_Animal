@@ -6,6 +6,7 @@ export let LANGUAGES = {
     "Español": "es-ES",
 }
 
+
 export let CAT_TRANSLATIONS = ["Cat", "Chat", "Katze", "Gatto", "Gato"]
 export let CHICKEN_TRANSLATIONS = ["Chicken", "Poulet", "Huhn", "Pollo", "Pollo"]
 export let COW_TRANSLATIONS = ["Cow", "Vache", "Kuh", "Mucca", "Vaca"]
@@ -15,3 +16,5 @@ export let FROG_TRANSLATIONS = ["Frog", "Grenouille", "Frosch", "Rana", "Rana"]
 export let GOOSE_TRANSLATIONS = ["Goose", "Oie", "Gans", "Oca", "Ganso"]
 export let HORSE_TRANSLATIONS = ["Horse", "Cheval", "Pferd", "Cavallo", "Caballo"]
 export let SHEEP_TRANSLATIONS = ["Sheep", "Mouton", "Schaf", "Pecora", "Oveja"]
+
+export let ALL_ANIMALS = [CAT_TRANSLATIONS, CHICKEN_TRANSLATIONS, COW_TRANSLATIONS, DINOSAUR_TRANSLATIONS, DOG_TRANSLATIONS, FROG_TRANSLATIONS, GOOSE_TRANSLATIONS, HORSE_TRANSLATIONS, SHEEP_TRANSLATIONS]
