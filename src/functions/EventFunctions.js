@@ -1,3 +1,5 @@
+import {playGame} from "./GameFunctions.js";
+
 /**
  * Initialize the event when the user
  * changes the language
@@ -29,4 +31,15 @@ export function initClickingOnAnimalEvent(languageSelected) {
             window.speechSynthesis.speak(speech);
         });
     }
+}
+
+/**
+ * Initialize the event when the user clicks the button
+ * to play the game
+ */
+export function initClickingPlayButtonEvent() {
+    let playButton = document.getElementById("playButton");
+    playButton.addEventListener("click", function () {
+        playGame();
+    });
 }

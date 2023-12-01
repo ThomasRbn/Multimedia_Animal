@@ -6,6 +6,8 @@ export let LANGUAGES = {
     "Español": "es-ES",
 }
 
+export let PLAY_STATE_STOPPED = 0;
+export let PLAY_STATE_PLAYING = 1;
 
 export let CAT_TRANSLATIONS = ["Cat", "Chat", "Katze", "Gatto", "Gato"]
 export let CHICKEN_TRANSLATIONS = ["Chicken", "Poulet", "Huhn", "Pollo", "Pollo"]
