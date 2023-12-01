@@ -42,6 +42,8 @@ export function checkUserAnswer(userAnswer, selectedLanguage) {
 
     speech.lang = Object.values(LANGUAGES)[languageIndex];
     window.speechSynthesis.speak(speech);
+
+    initGame(selectedLanguage);
 }
 
 export function playGame() {

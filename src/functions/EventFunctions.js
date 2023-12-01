@@ -39,15 +39,6 @@ export function initClickingOnAnimalEvent(selectedLanguage) {
     }
 }
 
-export function initClickingOnAnimalGameEvent(selectedLanguage) {
-    let animals = document.querySelectorAll("img");
-
-    for (let i = 0; i < animals.length; i++) {
-        let animalImg = animals[i];
-
-    }
-}
-
 /**
  * Initialize the event when the user clicks the button
  * to play the game
