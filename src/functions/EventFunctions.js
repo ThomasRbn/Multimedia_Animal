@@ -1,7 +1,6 @@
-import {playGame} from "./GameFunctions.js";
-
-import {checkUserAnswer} from "./GameFunctions";
-import {gameState} from "../GameState";
+import {checkUserAnswer, playGame} from "./GameFunctions.js";
+import {gameState} from "../GameState.js";
+import {PLAY_STATE_PLAYING} from "../Constants.js";
 
 /**
  * Initialize the event when the user
@@ -28,11 +27,15 @@ export function initClickingOnAnimalEvent(selectedLanguage) {
 
     for (let i = 0; i < animals.length; i++) {
         let animalImg = animals[i];
-        animalImg.addEventListener("click", function () {
+        animalImg.addEventListener('click', function () {
             let speech = new SpeechSynthesisUtterance(animalImg.getAttribute("alt"));
             speech.lang = selectedLanguage;
             window.speechSynthesis.speak(speech);
-        });
+            if (gameState.playState === PLAY_STATE_PLAYING) {
+                let animalName = animalImg.getAttribute("alt");
+                checkUserAnswer(animalName, selectedLanguage)
+            }
+        })
     }
 }
 
@@ -41,10 +44,7 @@ export function initClickingOnAnimalGameEvent(selectedLanguage) {
 
     for (let i = 0; i < animals.length; i++) {
         let animalImg = animals[i];
-        animalImg.addEventListener("click", function () {
-            let animalName = animalImg.getAttribute("alt");
-            checkUserAnswer(animalName, gameState.currentAnimal, selectedLanguage)
-        });
+
     }
 }
 
