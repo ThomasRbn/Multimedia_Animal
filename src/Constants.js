@@ -6,6 +6,8 @@ export let LANGUAGES = {
     "Español": "es-ES",
 }
 
+export let GOOD_ANSWER_TRANSLATIONS = ["Good answer!", "Bonne réponse!", "Richtige Antwort!", "Risposta corretta!", "Respuesta correcta!"]
+export let WRONG_ANSWER_TRANSLATIONS = ["Wrong answer!", "Mauvaise réponse!", "Falsche Antwort!", "Risposta sbagliata!", "Respuesta incorrecta!"]
 export let PLAY_STATE_STOPPED = 0;
 export let PLAY_STATE_PLAYING = 1;
 

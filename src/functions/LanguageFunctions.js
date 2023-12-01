@@ -1,13 +1,14 @@
 import {ALL_ANIMALS, LANGUAGES} from "../Constants.js";
 
+
 /**
  * Get the translation of an animal in a specific language
  * @param animalInEnglish the animal in English
- * @param language the language to translate to
+ * @param selectedLanguage the language to translate to
  * @returns {string} the animal in the specified language
  */
-export function getAnimalTranslation(animalInEnglish, language){
-    let languageIndex = Object.values(LANGUAGES).indexOf(language);
+export function getAnimalTranslation(animalInEnglish, selectedLanguage){
+    let languageIndex = getLanguageIndex(selectedLanguage);
     for (let i = 0; i < ALL_ANIMALS.length; i++) {
         if (ALL_ANIMALS[i][0] === animalInEnglish) {
             return ALL_ANIMALS[i][languageIndex];
@@ -23,10 +24,10 @@ export function getAnimalTranslation(animalInEnglish, language){
 export function getURLLanguage() {
     let url = window.location.search;
     let urlParams = new URLSearchParams(url);
-    let language = urlParams.get("lang");
+    let selectedLanguage = urlParams.get("lang");
 
     // If lang is not defined, set default language to English
-    return language ? language : "en-US";
+    return selectedLanguage ? selectedLanguage : "en-US";
 }
 
 
@@ -34,14 +35,23 @@ export function getURLLanguage() {
  * Initialize the translation of animals
  * with the default language
  */
-export function initAnimalsTranslation(language) {
+export function initAnimalsTranslation(selectedLanguage) {
     let animals = document.querySelectorAll("img");
 
     for (let i = 0; i < animals.length; i++) {
         let animalImg = animals[i];
         let animalNameInEnglish = animalImg.getAttribute("id");
-        let translation = getAnimalTranslation(animalNameInEnglish, language);
+        let translation = getAnimalTranslation(animalNameInEnglish, selectedLanguage);
         animalImg.setAttribute("alt", translation);
     }
+}
+
+/**
+ * Get the index of a language in the LANGUAGES array
+ * @param selectedLanguage the language to get the index of
+ * @returns {number} the index of the language in the LANGUAGES array
+ */
+export function getLanguageIndex(selectedLanguage) {
+    return Object.values(LANGUAGES).indexOf(selectedLanguage);
 }
 

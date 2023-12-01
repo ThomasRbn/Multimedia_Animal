@@ -5,10 +5,10 @@ import {LANGUAGES} from "../Constants.js";
  * Initialize the language selector
  * with all available languages
  * saved in Constants.js
- * @param language - The default language
+ * @param selectedLanguage - The default language
  * @returns {string} - The selected language
  */
-export function initLanguageSelector(language) {
+export function initLanguageSelector(selectedLanguage) {
     let parent = document.querySelector(".selectors");
 
     let labelSelector = document.createElement("label");
@@ -24,7 +24,7 @@ export function initLanguageSelector(language) {
         let option = document.createElement("option");
 
         // Set default language to English
-        if (Object.values(LANGUAGES)[i] === language) {
+        if (Object.values(LANGUAGES)[i] === selectedLanguage) {
             option.setAttribute("selected", "selected");
         }
 
