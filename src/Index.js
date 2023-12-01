@@ -6,12 +6,12 @@ import {
 } from "./functions/EventFunctions.js";
 import {initLanguageSelector} from "./functions/HTMLFunctions.js";
 
-let languageSelected = getURLLanguage();
+let selectedLanguage = getURLLanguage();
 
 window.onload = function () {
-    initLanguageSelector(languageSelected);
+    initLanguageSelector(selectedLanguage);
     initChangingLanguageEvent();
-    initAnimalsTranslation(languageSelected);
-    initClickingOnAnimalEvent(languageSelected);
+    initAnimalsTranslation(selectedLanguage);
+    initClickingOnAnimalEvent(selectedLanguage);
     initClickingPlayButtonEvent();
 }

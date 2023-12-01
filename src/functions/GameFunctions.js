@@ -7,16 +7,21 @@ import {
 } from "../Constants.js";
 import {getLanguageIndex, getURLLanguage} from "./LanguageFunctions.js";
 import {gameState} from "../GameState.js";
+import {recolorImage} from "./ColorFunctions.js";
 
 /**
  * Initialize the game by saying a random animal in the language selected
  * @param selectedLanguage - The language selected by the user
  */
 export function initGame(selectedLanguage){
-    console.log('initGame ' + selectedLanguage)
     let randomAnimal = getRandomWord(selectedLanguage);
 
     gameState.currentAnimal = randomAnimal;
+
+    let images = document.querySelector(".grid").children;
+    for (let i = 0; i < images.length; i++) {
+        images[i].style.border = "none";
+    }
 
     let speech = new SpeechSynthesisUtterance(randomAnimal);
     speech.lang = Object.values(LANGUAGES)[getLanguageIndex(selectedLanguage)];
@@ -40,10 +45,15 @@ export function checkUserAnswer(userAnswer, selectedLanguage) {
         speech.text = WRONG_ANSWER_TRANSLATIONS[languageIndex];
     }
 
+
     speech.lang = Object.values(LANGUAGES)[languageIndex];
     window.speechSynthesis.speak(speech);
+    recolorImage();
 
-    initGame(selectedLanguage);
+    setTimeout(function () {
+        initGame(selectedLanguage);
+    }, 2750);
+
 }
 
 export function playGame() {
