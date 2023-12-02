@@ -77,7 +77,10 @@ export function playGame() {
  * @returns {string} - A random word from the list of animals in the selected language
  */
 export function getRandomWord(selectedLanguage){
-    let randomAnimal = ALL_ANIMALS[Math.floor(Math.random() * ALL_ANIMALS.length)];
+    let randomAnimal = gameState.currentAnimal;
+    while (randomAnimal === gameState.currentAnimal){
+        randomAnimal = ALL_ANIMALS[Math.floor(Math.random() * ALL_ANIMALS.length)];
+    }
     let languageIndex = getLanguageIndex(selectedLanguage);
     return randomAnimal[languageIndex];
 }

@@ -8,9 +8,16 @@ export function recolorImage(){
     let images = document.querySelector('.grid').children;
     for(let i = 0; i < images.length; i++){
         if (images[i].alt === gameState.currentAnimal){
-            images[i].style.border = '5px solid green';
+            toggleAnimation('green-border', images[i])
         } else {
-            images[i].style.border = '5px solid red';
+            toggleAnimation('red-border', images[i])
         }
     }
+}
+
+function toggleAnimation(name, node) {
+    node.classList.toggle(name);
+    setTimeout(function() {
+        node.classList.toggle(name);
+    }, 1500);
 }
