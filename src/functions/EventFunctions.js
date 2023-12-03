@@ -32,8 +32,7 @@ export function initClickingOnAnimalEvent(selectedLanguage) {
             speech.lang = selectedLanguage;
             window.speechSynthesis.speak(speech);
             if (gameState.playState === PLAY_STATE_PLAYING) {
-                let animalName = animalImg.getAttribute("alt");
-                checkUserAnswer(animalName, selectedLanguage)
+                checkUserAnswer(animalImg, selectedLanguage)
             }
         })
     }

@@ -1,9 +1,19 @@
 .green-border {
     animation: green-border 1s ease-in-out 1;
 }
+.green-border_other {
+    animation: green-border 1s ease-in-out 1;
+    animation-delay: 0.5s;
+}
 
 @keyframes green-border {
     0% {
+        background: #00ff00;
+    }
+    25%{
+        background: rgba(0, 255, 0, 0.0);
+    }
+    50%{
         background: #00ff00;
     }
     100% {
@@ -11,13 +21,23 @@
     }
 }
 
-.red-border {
+.red-border_other {
     animation: red-border 1s ease-in-out 1;
     animation-delay: 0.5s;
 }
 
+.red-border {
+    animation: red-border 1s ease-in-out 1;
+}
+
 @keyframes red-border {
     0% {
+        background: #ff0000;
+    }
+    25% {
+        background: rgba(255, 0, 0, 0.0);
+    }
+    50% {
         background: #ff0000;
     }
     100% {
@@ -77,14 +97,16 @@ header{
 
 
 .grid {
+    display: flex;
+    align-content: center;
     flex-wrap: wrap;
-    width: 50%;
+    width: 70%;
     height: 100%;
 }
 
 .grid img {
-    width: 10vw;
-    height: 10vw;
+    width: 15vw;
+    height: 15vw;
     object-fit: fill;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);

@@ -32,10 +32,11 @@ export function initGame(selectedLanguage){
  * Check if the user answer is correct or not
  * If the answer is correct, the browser will say "Good answer" in the language selected
  * If the answer is wrong, the browser will say "Wrong answer" in the language selected
- * @param userAnswer - The answer given by the user
+ * @param animalImg
  * @param selectedLanguage - The language selected by the user
  */
-export function checkUserAnswer(userAnswer, selectedLanguage) {
+export function checkUserAnswer(animalImg, selectedLanguage) {
+    let userAnswer = animalImg.getAttribute("alt");
     let languageIndex = getLanguageIndex(selectedLanguage);
     let speech = new SpeechSynthesisUtterance();
 
@@ -45,10 +46,9 @@ export function checkUserAnswer(userAnswer, selectedLanguage) {
         speech.text = WRONG_ANSWER_TRANSLATIONS[languageIndex];
     }
 
-
     speech.lang = Object.values(LANGUAGES)[languageIndex];
     window.speechSynthesis.speak(speech);
-    recolorImage();
+    recolorImage(animalImg);
 
     setTimeout(function () {
         initGame(selectedLanguage);
