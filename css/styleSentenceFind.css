@@ -40,7 +40,7 @@
     }
 }
 
-@keyframes introImg {
+@keyframes slideUp {
     0% {
         opacity: 0;
         transform: translateY(900px);
@@ -48,6 +48,10 @@
     100% {
         transform: translateY(0px);
     }
+}
+
+.slideUp {
+    animation: slideUp 1s cubic-bezier(0, 0, 0, 1) 1;
 }
 
 #title::after {
@@ -131,6 +135,7 @@ header {
     justify-content: center;
     align-items: center;
     width: 80%;
+    overflow: hidden;
 }
 
 #choices {

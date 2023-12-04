@@ -66,6 +66,7 @@ export function initClickingOnAnimalEvent(selectedLanguage) {
 export let initNextSentenceEvent = function (selectedLanguage) {
     let nextSentence = document.getElementById("nextSentence");
     if (nextSentence.innerHTML === "") {
+        toggleAnimation("slideUp", nextSentence)
         let button = document.createElement("button");
         button.innerHTML = "Next sentence";
         nextSentence.appendChild(button);
