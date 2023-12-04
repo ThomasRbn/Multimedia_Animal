@@ -7,11 +7,11 @@ import {gameState} from "../GameState.js";
 export function recolorImage(animalClicked) {
     let images = document.querySelector('.grid').children;
     for (let i = 0; i < images.length; i++) {
-        if(images[i] === animalClicked && images[i].alt === gameState.currentAnimal){
+        if (images[i] === animalClicked && images[i].alt === gameState.currentAnimal) {
             toggleAnimation('green-border', images[i])
             continue;
         }
-        if(images[i] === animalClicked){
+        if (images[i] === animalClicked) {
             toggleAnimation('red-border', images[i])
             continue;
         }
@@ -29,8 +29,12 @@ export function recolorImage(animalClicked) {
  * @param node
  */
 export function toggleAnimation(name, node) {
-    node.classList.toggle(name);
-    setTimeout(function () {
+    if (!node.classList.contains(name)) {
         node.classList.toggle(name);
-    }, 1500);
+    }
+    setTimeout(function () {
+        if (node.classList.contains(name)) {
+            node.classList.toggle(name);
+        }
+    }, 1000);
 }

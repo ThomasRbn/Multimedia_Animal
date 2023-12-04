@@ -29,7 +29,7 @@ export function getRandomSentence(selectedLanguage) {
 export function replaceAnimalInSentence(sentence){
     let modifiedSentence = sentence.split('.')[0];
     let sentenceSplitted = modifiedSentence.split(' ');
-    let animal = sentenceSplitted.filter(word => word.toUpperCase() === word).toString();
+    let animal = sentenceSplitted.filter(word => word.toUpperCase() === word)[0];
     gameState.currentAnimal = animal;
     let numberUnderscore = '';
     for(let i = 0; i < animal.length; i++){
