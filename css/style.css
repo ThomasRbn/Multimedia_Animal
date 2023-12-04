@@ -1,19 +1,8 @@
-.green-border {
-    animation: green-border 1s ease-in-out 1;
-}
-.green-border_other {
-    animation: green-border 1s ease-in-out 1;
-    animation-delay: 0.5s;
-}
-
 @keyframes green-border {
     0% {
         background: #00ff00;
     }
-    25%{
-        background: rgba(0, 255, 0, 0.0);
-    }
-    50%{
+    50% {
         background: #00ff00;
     }
     100% {
@@ -21,21 +10,27 @@
     }
 }
 
-.red-border_other {
-    animation: red-border 1s ease-in-out 1;
-    animation-delay: 0.5s;
-}
-
-.red-border {
-    animation: red-border 1s ease-in-out 1;
+@keyframes introUnolingo{
+    0%{
+        content: "l";
+    }
+    25%{
+        content: "li";
+    }
+    50%{
+        content: "lin";
+    }
+    75%{
+        content: "ling";
+    }
+    100%{
+        content: "lingo";
+    }
 }
 
 @keyframes red-border {
     0% {
         background: #ff0000;
-    }
-    25% {
-        background: rgba(255, 0, 0, 0.0);
     }
     50% {
         background: #ff0000;
@@ -43,6 +38,41 @@
     100% {
         background: rgba(255, 0, 0, 0.0);
     }
+}
+
+@keyframes introImg {
+    0% {
+        opacity: 0;
+        transform: translateY(900px);
+    }
+    100% {
+        transform: translateY(0px);
+    }
+}
+
+#title::after {
+    animation: introUnolingo 1s ease-in-out 1;
+    content: "lingo";
+}
+
+.green-border {
+    animation: green-border 1s ease-in-out 1;
+    outline: 2px solid #000000;
+    z-index: 100;
+}
+
+.green-border_other {
+    animation: green-border 1s ease-in-out 1;
+}
+
+.red-border_other {
+    animation: red-border 1s ease-in-out 1;
+}
+
+.red-border {
+    animation: red-border 1s ease-in-out 1;
+    outline: 2px solid #000000;
+    z-index: 100;
 }
 
 html{
@@ -87,7 +117,8 @@ body{
 header{
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+    flex-direction: column;
+    justify-content: space-evenly;
     align-items: center;
     width: 25%;
     height: 100%;
@@ -102,14 +133,26 @@ header{
     flex-wrap: wrap;
     width: 70%;
     height: 100%;
+    gap: 10px;
+    overflow: hidden;
+    justify-content: center;
 }
 
 .grid img {
     width: 15vw;
     height: 15vw;
     object-fit: fill;
-    border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s cubic-bezier(0, 0, 0, 1);
+    background: white;
+    border-radius: 15px;
+    animation: introImg 1s ease-in-out 1;
+}
+
+.grid img:hover {
+    cursor: pointer;
+    transform: scale(1.05);
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .selectors {
