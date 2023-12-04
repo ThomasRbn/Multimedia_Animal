@@ -122,7 +122,6 @@ header{
     align-items: center;
     width: 25%;
     height: 100%;
-    background: #fff;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
@@ -146,13 +145,7 @@ header{
     transition: all 0.3s cubic-bezier(0, 0, 0, 1);
     background: white;
     border-radius: 15px;
-    animation: introImg 1s ease-in-out 1;
-}
-
-.grid img:hover {
     cursor: pointer;
-    transform: scale(1.05);
-    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2);
 }
 
 .selectors {
