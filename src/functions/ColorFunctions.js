@@ -23,6 +23,11 @@ export function recolorImage(animalClicked) {
     }
 }
 
+/**
+ * Fonction pour activer l'animation de bonne ou de mauvaise réponse
+ * @param name
+ * @param node
+ */
 function toggleAnimation(name, node) {
     node.classList.toggle(name);
     setTimeout(function () {
