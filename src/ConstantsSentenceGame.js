@@ -29,7 +29,7 @@ export const SENTENCES_TRANSLATIONS = {
     CHICKEN: {
         en: [
             "The CHICKEN is clucking in the backyard.",
-            "A CHICKEN pecks at the grains on the ground.",
+            "My CHICKEN pecks at the grains on the ground.",
             "The CHICKEN lays eggs."
         ],
         fr: [
