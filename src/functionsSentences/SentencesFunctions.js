@@ -6,10 +6,12 @@ import {gameState} from "../GameState.js";
  * @param selectedLanguage - langue sélectionnée
  * @returns {*} - phrase aléatoire
  */
-function getRandomSentence(selectedLanguage) {
+export function getRandomSentence(selectedLanguage) {
     //selections d'un index aléatoire entre 0 et 8
     let animalIndex = Math.floor(Math.random() * Object.keys(SENTENCES_TRANSLATIONS).length);
-    return SENTENCES_TRANSLATIONS[animalIndex][selectedLanguage.split('-')[0]][Math.floor(Math.random() * 3)];
+    let sentence =  SENTENCES_TRANSLATIONS[animalIndex][selectedLanguage.split('-')[0]][Math.floor(Math.random() * 3)];
+    replaceAnimalInSentence(sentence);
+    return sentence;
 }
 
 /**
@@ -17,11 +19,11 @@ function getRandomSentence(selectedLanguage) {
  * @param sentence - sentence to get the animal
  * @returns {string} - animal associated to the sentence
  */
-function getAssociatedAnimal(sentence){
+export function replaceAnimalInSentence(sentence){
     let sentenceSplitted = sentence.split(' ');
     let animal = sentenceSplitted.filter(word => word.toUpperCase() === word).toString();
     gameState.currentAnimal = animal;
-    return animal;
+    sentenceSplitted[sentenceSplitted.indexOf(animal)] = '______';
 }
 
 /**
@@ -29,6 +31,6 @@ function getAssociatedAnimal(sentence){
  * @param animal - animal to check
  * @returns {boolean} - true if the animal is the same as the one in the sentence
  */
-function checkAnimal(animal){
+export function checkAnimal(animal){
     return gameState.currentAnimal === animal;
 }
