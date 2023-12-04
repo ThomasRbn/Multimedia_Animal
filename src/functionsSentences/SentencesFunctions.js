@@ -14,6 +14,7 @@ export function getRandomSentence(selectedLanguage) {
     console.log(selectedLanguage.split('-')[0])
     let sentence =  SENTENCES_TRANSLATIONS[animalIndex][selectedLanguage.split('-')[0]][Math.floor(Math.random() * 3)];
     console.log(sentence)
+    gameState.completeSentence = sentence;
     sentence = replaceAnimalInSentence(sentence);
     console.log(sentence)
     console.log(gameState)
@@ -26,10 +27,15 @@ export function getRandomSentence(selectedLanguage) {
  * @returns {string} - animal associated to the sentence
  */
 export function replaceAnimalInSentence(sentence){
-    let sentenceSplitted = sentence.split(' ');
+    let modifiedSentence = sentence.split('.')[0];
+    let sentenceSplitted = modifiedSentence.split(' ');
     let animal = sentenceSplitted.filter(word => word.toUpperCase() === word).toString();
     gameState.currentAnimal = animal;
-    sentenceSplitted[sentenceSplitted.indexOf(animal)] = '______';
+    let numberUnderscore = '';
+    for(let i = 0; i < animal.length; i++){
+        numberUnderscore += '_'
+    }
+    sentenceSplitted[sentenceSplitted.indexOf(animal)] = numberUnderscore;
     return sentenceSplitted.join(' ');
 }
 
