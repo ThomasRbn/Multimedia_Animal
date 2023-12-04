@@ -23,7 +23,7 @@ export const SENTENCES_TRANSLATIONS = {
         es: [
             "El GATO juega con una bola de lana.",
             "El GATO ama tomar el sol.",
-            "Mi GATO disfruta cazando ratones."
+            "Mi GATO cazando ratones."
         ]
     },
     CHICKEN: {
@@ -33,9 +33,9 @@ export const SENTENCES_TRANSLATIONS = {
             "The CHICKEN lays eggs."
         ],
         fr: [
-            "La POULE caquette dans la cour.",
-            "Une POULE picore les grains sur le sol.",
-            "La POULE pond des œufs."
+            "Le POULET caquette dans la cour.",
+            "Un POULET picore les grains sur le sol.",
+            "Le POULET pond des œufs."
         ],
         de: [
             "Das HUHN gackert im Hinterhof.",
@@ -43,14 +43,14 @@ export const SENTENCES_TRANSLATIONS = {
             "Das HUHN legt Eier."
         ],
         it: [
-            "La GALLINA starnazza nel cortile.",
-            "Una GALLINA becca i grani per terra.",
-            "La GALLINA depone le uova."
+            "Il POLLO starnazza nel cortile.",
+            "Un POLLO becca i grani per terra.",
+            "Il POLLO depone le uova."
         ],
         es: [
-            "La GALLINA cacarea en el patio trasero.",
-            "Una GALLINA pica los granos en el suelo.",
-            "La GALLINA pone huevos."
+            "Il POLLO cacarea en el patio trasero.",
+            "Un POLLO pica los granos en el suelo.",
+            "Il POLLO pone huevos."
         ]
     },
     COW: {
@@ -114,19 +114,19 @@ export const SENTENCES_TRANSLATIONS = {
             "The farmer has a very silly GOOSE."
         ],
         fr: [
-            "L'OIE fait un son comme honk.",
-            "Mon père prépare du foie gras à partir de l'OIE.",
+            "L' OIE fait un son comme honk.",
+            "Mon père prépare du foie gras à partir de l' OIE.",
             "Le fermier a une OIE très drôle."
         ],
         de: [
-            "GÄNSE klingen wie honk.",
-            "Mein Vater macht Gänseleberpastete aus GÄNSEN.",
+            "Das GANS klingt wie honk.",
+            "Mein Vater macht Gänseleberpastete aus GANS.",
             "Der Bauer hat eine sehr alberne GANS."
         ],
         it: [
-            "L'OCA suona come honk.",
-            "Mio padre sta preparando il foie gras dall'OCA.",
-            "Il contadino ha un'OCA molto sciocca."
+            "L' OCA suona come honk.",
+            "Mio padre sta preparando il foie gras dall' OCA.",
+            "Il contadino ha un' OCA molto sciocca."
         ],
         es: [
             "El GANSO suena como honk.",
@@ -137,12 +137,12 @@ export const SENTENCES_TRANSLATIONS = {
     DINOSAUR: {
         en: [
             "The DINOSAUR is a prehistoric animal.",
-            "Humans and DINOSAURS did not live at the same time.",
+            "Humans and DINOSAUR did not live at the same time.",
             "The DINOSAUR has tiny arms."
         ],
         fr: [
             "Le DINOSAURE est un animal préhistorique.",
-            "Les humains et les DINOSAURES ne vivaient pas à la même époque.",
+            "Les humains et le DINOSAURE ne vivaient pas à la même époque.",
             "Le DINOSAURE a de petits bras."
         ],
         de: [
@@ -152,19 +152,19 @@ export const SENTENCES_TRANSLATIONS = {
         ],
         it: [
             "Il DINOSAURO è un animale preistorico.",
-            "Gli umani e i DINOSAURI non vivevano contemporaneamente.",
+            "Gli umani e il DINOSAURO non vivevano contemporaneamente.",
             "Il DINOSAURO ha piccole braccia."
         ],
         es: [
             "El DINOSAURIO es un animal prehistórico.",
-            "Los humanos y los DINOSAURIOS no vivieron al mismo tiempo.",
+            "Los humanos y lo DINOSAURIO no vivieron al mismo tiempo.",
             "El DINOSAURIO tiene brazos pequeños."
         ]
     },
     FROG: {
         en: [
             "The FROG is jumping in the pond.",
-            "Flies are the FROG's favorite food.",
+            "Flies are the FROG 's favorite food.",
             "When the FROG is young, it is called a tadpole."
         ],
         fr: [
@@ -174,7 +174,7 @@ export const SENTENCES_TRANSLATIONS = {
         ],
         de: [
             "Der FROSCH springt im Teich.",
-            "Fliegen sind die Lieblingsspeise des FROSCHS.",
+            "Fliegen sind die Lieblingsspeise der FROSCH.",
             "Wenn der FROSCH jung ist, nennt man ihn Kaulquappe."
         ],
         it: [
@@ -202,7 +202,7 @@ export const SENTENCES_TRANSLATIONS = {
         de: [
             "Das PFERD galoppiert auf der Weide.",
             "Einige Menschen reiten auf einem PFERD.",
-            "Karotten sind das Lieblingsessen des PFERDS."
+            "Karotten sind das Lieblingsessen des PFERD."
         ],
         it: [
             "Il CAVALLO galoppa nel campo.",
@@ -222,23 +222,23 @@ export const SENTENCES_TRANSLATIONS = {
             "The SHEEP is grazing in the field."
         ],
         fr: [
-            "La BREBIS est en train d'être tondue.",
-            "Les agriculteurs élèvent des BREBIS pour leur laine.",
-            "La BREBIS broute dans le champ."
+            "Le MOUTON est en train d'être tondu.",
+            "Les agriculteurs élèvent le MOUTON pour sa laine.",
+            "Le MOUTON broute dans le champ."
         ],
         de: [
             "Das SCHAF wird geschoren.",
-            "Bauern züchten SCHAFE für ihre Wolle.",
+            "Bauern züchten SCHAF für ihre Wolle.",
             "Das SCHAF grast auf der Weide."
         ],
         it: [
             "La PECORA viene tosata.",
-            "Gli agricoltori allevano PECORE per la loro lana.",
+            "Gli agricoltori allevano la PECORA per la sua lana.",
             "La PECORA sta pascolando nel campo."
         ],
         es: [
             "La OVEJA está siendo esquilada.",
-            "Los agricultores crían OVEJAS por su lana.",
+            "Los agricultores crían OVEJA por sua lana.",
             "La OVEJA pasta en el campo."
         ]
     }
