@@ -9,7 +9,7 @@ import {gameState} from "../GameState.js";
 export function getRandomSentence(selectedLanguage) {
     //selections d'un index aléatoire entre 0 et 8
     let animalIndex = Math.floor(Math.random() * Object.keys(SENTENCES_TRANSLATIONS).length);
-    let sentence =  SENTENCES_TRANSLATIONS[animalIndex][selectedLanguage.split('-')[0]][Math.floor(Math.random() * 3)];
+    let sentence =  SENTENCES_TRANSLATIONS[animalIndex].get(selectedLanguage.split('-')[0])[Math.floor(Math.random() * 3)];
     replaceAnimalInSentence(sentence);
     return sentence;
 }
