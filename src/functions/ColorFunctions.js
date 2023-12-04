@@ -28,7 +28,7 @@ export function recolorImage(animalClicked) {
  * @param name
  * @param node
  */
-function toggleAnimation(name, node) {
+export function toggleAnimation(name, node) {
     node.classList.toggle(name);
     setTimeout(function () {
         node.classList.toggle(name);
