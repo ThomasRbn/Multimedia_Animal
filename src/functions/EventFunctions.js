@@ -1,6 +1,6 @@
 import {checkUserAnswer, playGame} from "./GameFunctions.js";
 import {gameState} from "../GameState.js";
-import {PLAY_STATE_PLAYING} from "../Constants.js";
+import {PLAY_STATE_PLAYING} from "../ConstantsAnimalsGame.js";
 
 /**
  * Initialize the event when the user

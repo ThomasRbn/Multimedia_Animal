@@ -1,4 +1,4 @@
-import {ALL_ANIMALS, LANGUAGES} from "../Constants.js";
+import {ALL_ANIMALS, LANGUAGES} from "../ConstantsAnimalsGame.js";
 
 
 /**

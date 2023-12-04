@@ -1,10 +1,10 @@
-import {LANGUAGES} from "../Constants.js";
+import {LANGUAGES} from "../ConstantsAnimalsGame.js";
 
 
 /**
  * Initialize the language selector
  * with all available languages
- * saved in Constants.js
+ * saved in ConstantsAnimalsGame.js
  * @param selectedLanguage - The default language
  * @returns {string} - The selected language
  */

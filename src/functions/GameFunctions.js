@@ -4,7 +4,7 @@ import {
     LANGUAGES, PLAY_STATE_PLAYING,
     PLAY_STATE_STOPPED,
     WRONG_ANSWER_TRANSLATIONS
-} from "../Constants.js";
+} from "../ConstantsAnimalsGame.js";
 import {getLanguageIndex, getURLLanguage} from "./LanguageFunctions.js";
 import {gameState} from "../GameState.js";
 import {recolorImage} from "./ColorFunctions.js";
