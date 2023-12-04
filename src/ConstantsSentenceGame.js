@@ -56,7 +56,7 @@ export const SENTENCES_TRANSLATIONS = {
     COW: {
         en: [
             "The COW grazes in the meadow.",
-            "A COW provides milk for many dairy products.",
+            "My COW provides milk for many dairy products.",
             "The calf is the baby of the COW."
         ],
         fr: [
@@ -114,9 +114,9 @@ export const SENTENCES_TRANSLATIONS = {
             "The farmer has a very silly GOOSE."
         ],
         fr: [
-            "L' OIE fait un son comme honk.",
+            "Mon OIE fait un son comme honk.",
             "Mon père prépare du foie gras à partir de l' OIE.",
-            "Le fermier a une OIE très drôle."
+            "Le fermier a une OIE très idiote."
         ],
         de: [
             "Das GANS klingt wie honk.",
@@ -124,7 +124,7 @@ export const SENTENCES_TRANSLATIONS = {
             "Der Bauer hat eine sehr alberne GANS."
         ],
         it: [
-            "L' OCA suona come honk.",
+            "Une OCA suona come honk.",
             "Mio padre sta preparando il foie gras dall' OCA.",
             "Il contadino ha un' OCA molto sciocca."
         ],
