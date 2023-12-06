@@ -1,7 +1,14 @@
+# Projet Web : Animaux
+## Auteurs
+- [Russo Nicolas](https://github.com/Azuras03)
+- [Robineau Thomas](https://github.com/ThomasRbn)
+
 # Comment lancer l'application
+
 ## Prérequis
-- Node JS >= 21.0.0
-- NPM >= 10.0.0
+
+- **Node JS** >= 21.0.0
+- **NPM** >= 10.0.0
 
 ## Installation
 ```bash
@@ -15,7 +22,7 @@ http-server
 
 ## Code
 
-Le code source est du JavaScript, du HTML et du CSS natif. Node JS est utilisé pour lancer un serveur HTTP.
+Le code source est du **JavaScript**, du **HTML** et du **CSS** natif. Node JS est utilisé pour lancer un serveur HTTP.
 
 # Fonctionnalités : 
 
