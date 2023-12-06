@@ -2,8 +2,5 @@
 .idea
 *.iml
 
-## Files
-*.pdf
-
 /node_modules/
 /bun.lockb
