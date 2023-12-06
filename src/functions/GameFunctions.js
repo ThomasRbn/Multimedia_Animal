@@ -8,6 +8,7 @@ import {
 import {getLanguageIndex, getURLLanguage} from "./LanguageFunctions.js";
 import {gameState} from "../GameState.js";
 import {recolorImage} from "./ColorFunctions.js";
+import {audioScore, audioLose, playAudio} from "./AudioFunctions.js";
 
 /**
  * Initialize the game by saying a random animal in the language selected
@@ -42,8 +43,10 @@ export function checkUserAnswer(animalImg, selectedLanguage) {
 
     if (userAnswer === gameState.currentAnimal) {
         speech.text = GOOD_ANSWER_TRANSLATIONS[languageIndex];
+        playAudio(audioScore);
     } else {
         speech.text = WRONG_ANSWER_TRANSLATIONS[languageIndex];
+        playAudio(audioLose);
     }
 
     speech.lang = Object.values(LANGUAGES)[languageIndex];

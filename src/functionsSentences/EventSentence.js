@@ -3,11 +3,9 @@ import {getAnimalTranslation} from "../functions/LanguageFunctions.js";
 import {ALL_ANIMALS} from "../ConstantsAnimalsGame.js";
 import {gameState} from "../GameState.js";
 import {toggleAnimation} from "../functions/ColorFunctions.js";
+import {audioScore, audioLose, playAudio} from "../functions/AudioFunctions.js";
 
 let phraseARemplir = document.getElementById("phraseARemplirText");
-let audioScore = new Audio("assets/sound/score.mp3");
-audioScore.volume = 0.5;
-let audioLose = new Audio("assets/sound/WrongSound.mp3");
 
 /**
  * Initialise la phrase à remplir
@@ -48,7 +46,7 @@ export function initClickingOnAnimalEvent(selectedLanguage) {
                 speech.lang = selectedLanguage;
                 window.speechSynthesis.speak(speech);
                 phraseARemplir.innerHTML = gameState.completeSentence;
-                playAudio(audioScore);
+                playAudio(audioScore)
                 toggleAnimation('green-border', animal);
                 initNextSentenceEvent(selectedLanguage);
                 return;
@@ -83,18 +81,4 @@ export let initNextSentenceEvent = function (selectedLanguage) {
 export let removeNextSentenceEvent = function () {
     let nextSentence = document.getElementById("nextSentence");
     nextSentence.innerHTML = "";
-}
-
-/**
- * Fonction permettant de jouer un son mis en paramètre
- * @param audio
- */
-export function playAudio(audio) {
-    if (audio.played) {
-        audio.pause();
-        audio.currentTime = 0;
-    }
-    if (audio.paused) {
-        audio.play();
-    }
 }
