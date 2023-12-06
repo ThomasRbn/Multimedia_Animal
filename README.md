@@ -13,6 +13,10 @@ npm install
 http-server
 ```
 
+## Code
+
+Le code source est du JavaScript, du HTML et du CSS natif. Node JS est utilisé pour lancer un serveur HTTP.
+
 # Fonctionnalités : 
 
 ## Primaires
